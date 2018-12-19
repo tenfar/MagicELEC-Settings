@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Addon Name: @DISTRONAME@ Configuration
-# Addon id: service.coreelec.settings
-# Addon Provider: CoreELEC
+# Addon id: service.magicelec.settings
+# Addon Provider: MagicELEC
 msgid ""
 msgstr ""
 "MIME-Version: 1.0\n"
@@ -45,7 +45,7 @@ msgid "Architecture: "
 msgstr ""
 
 msgctxt "#609"
-msgid "CoreELEC is a minimal Linux distribution purpose built for Kodi media center. CoreELEC is designed to boot fast with an installation process simple enough for anyone to convert a bare HTPC into a fully configured media machine in under 15 minutes."
+msgid "MagicELEC is a minimal Linux distribution purpose built for Kodi media center. MagicELEC is designed to boot fast with an installation process simple enough for anyone to convert a bare HTPC into a fully configured media machine in under 15 minutes."
 msgstr ""
 
 msgctxt "#610"

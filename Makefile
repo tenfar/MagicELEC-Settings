@@ -3,7 +3,7 @@
 # Copyright (C) 2009-2013 Stephan Raue (stephan@openelec.tv)
 # Copyright (C) 2013 Lutz Fiebach (lufie@openelec.tv)
 
-ADDON_NAME=service.coreelec.settings
+ADDON_NAME=service.magicelec.settings
 ADDON_VERSION=9.0.0
 DISTRONAME:=CoreELEC
 

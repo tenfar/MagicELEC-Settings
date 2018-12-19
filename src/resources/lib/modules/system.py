@@ -26,7 +26,7 @@ class system:
     UPDATE_DOWNLOAD_URL = None
     LOCAL_UPDATE_DIR = None
     XBMC_RESET_FILE = None
-    COREELEC_RESET_FILE = None
+    MAGICELEC_RESET_FILE = None
     KEYBOARD_INFO = None
     UDEV_KEYBOARD_INFO = None
     NOX_KEYBOARD_INFO = None
@@ -699,7 +699,7 @@ class system:
             if listItem.getProperty('entry') != 'ShowCustomChannels':
                 if self.get_json(listItem.getProperty('value')) is None:
                     xbmcDialog = xbmcgui.Dialog()
-                    xbmcDialog.ok('CoreELEC Update', self.oe._(32191).encode('utf-8'))
+                    xbmcDialog.ok('MagicELEC Update', self.oe._(32191).encode('utf-8'))
                     xbmcDialog = None
                     del xbmcDialog
             self.update_json = self.build_json()
@@ -740,7 +740,7 @@ class system:
             if self.struct['update']['settings']['Build']['value'] != '':
                 self.update_file = self.update_json[self.struct['update']['settings']['Channel']['value']]['url'] + self.get_available_builds(self.struct['update']['settings']['Build']['value'])
                 xbmcDialog = xbmcgui.Dialog()
-                answer = xbmcDialog.yesno('CoreELEC Update', self.oe._(32188).encode('utf-8') + ':  ' + version.encode('utf-8'),
+                answer = xbmcDialog.yesno('MagicELEC Update', self.oe._(32188).encode('utf-8') + ':  ' + version.encode('utf-8'),
                                       self.oe._(32187).encode('utf-8') + ':  ' + self.struct['update']['settings']['Build']['value'].encode('utf-8'),
                                       self.oe._(32180).encode('utf-8'))
                 xbmcDialog = None
@@ -757,7 +757,7 @@ class system:
         try:
             self.oe.dbg_log('system::get_json', 'enter_function', 0)
             if url is None:
-                url = self.UPDATE_DOWNLOAD_URL % ('update.coreelec.org', '', 'releases.php')
+                url = self.UPDATE_DOWNLOAD_URL % ('update.magicelec.tv', '', 'releases')
             data = self.oe.load_url(url)
             if not data is None:
                 update_json = json.loads(data)
@@ -909,7 +909,7 @@ class system:
             self.oe.dbg_log('system::reset_oe', 'enter_function', 0)
             if self.ask_sure_reset('Hard') == 1:
                 self.oe.set_busy(1)
-                reset_file = open(self.COREELEC_RESET_FILE, 'w')
+                reset_file = open(self.MAGICELEC_RESET_FILE, 'w')
                 reset_file.write('reset')
                 reset_file.close()
                 self.oe.winOeMain.close()
@@ -973,7 +973,7 @@ class system:
                     pass
                     
                 self.backup_dlg = xbmcgui.DialogProgress()
-                self.backup_dlg.create('CoreELEC', self.oe._(32375).encode('utf-8'), ' ', ' ')
+                self.backup_dlg.create('MagicELEC', self.oe._(32375).encode('utf-8'), ' ', ' ')
                 if not os.path.exists(self.BACKUP_DESTINATION):
                     os.makedirs(self.BACKUP_DESTINATION)
                 self.backup_file = self.oe.timestamp() + '.tar'

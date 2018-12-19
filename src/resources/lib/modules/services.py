@@ -11,7 +11,7 @@ import xbmcgui
 import xbmcaddon
 
 
-__scriptid__ = 'service.coreelec.settings'
+__scriptid__ = 'service.magicelec.settings'
 __addon__ = xbmcaddon.Addon(id=__scriptid__)
 _ = __addon__.getLocalizedString
 
@@ -609,7 +609,7 @@ class services:
             xbmcDialog = xbmcgui.Dialog()
             newpwd = xbmcDialog.input(_(746))
             if newpwd:
-                if newpwd == "coreelec":
+                if newpwd == "magicelec":
                     self.oe.execute('cp -fp /usr/cache/shadow /storage/.cache/shadow')
                     readout3 = "Retype password"
                 else:

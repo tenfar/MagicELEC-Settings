@@ -633,8 +633,8 @@ class bluetooth:
                 self.signal_receivers = []
                 self.NameOwnerWatch = None
                 self.ObexNameOwnerWatch = None
-                self.btAgentPath = '/CoreELEC/bt_agent'
-                self.obAgentPath = '/CoreELEC/ob_agent'
+                self.btAgentPath = '/MagicELEC/bt_agent'
+                self.obAgentPath = '/MagicELEC/ob_agent'
                 self.parent = parent
                 self.oe.dbg_log('bluetooth::monitor::__init__', 'exit_function', 0)
             except Exception, e:

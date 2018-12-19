@@ -7,7 +7,7 @@ import xbmc
 import socket
 import xbmcaddon
 
-__scriptid__ = 'service.coreelec.settings'
+__scriptid__ = 'service.magicelec.settings'
 __addon__ = xbmcaddon.Addon(id=__scriptid__)
 __cwd__ = __addon__.getAddonInfo('path')
 __media__ = '%s/resources/skins/Default/media/' % __cwd__
@@ -15,8 +15,8 @@ _ = __addon__.getLocalizedString
 
 try:
     sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
-    sock.connect('/var/run/service.coreelec.settings.sock')
+    sock.connect('/var/run/service.magicelec.settings.sock')
     sock.send('openConfigurationWindow')
     sock.close()
 except Exception, e:
-    xbmc.executebuiltin('Notification("CoreELEC", "%s", 5000, "%sicons/icon.png")' % (_(32390).encode('utf-8'), __media__))
+    xbmc.executebuiltin('Notification("MagicELEC", "%s", 5000, "%sicons/icon.png")' % (_(32390).encode('utf-8'), __media__))
