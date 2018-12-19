@@ -5,7 +5,7 @@
 
 ADDON_NAME=service.magicelec.settings
 ADDON_VERSION=9.0.0
-DISTRONAME:=CoreELEC
+DISTRONAME:=MagicELEC
 
 SHELL=/bin/bash
 BUILDDIR=build
