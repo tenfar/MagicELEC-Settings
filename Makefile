@@ -50,7 +50,7 @@ $(BUILDDIR)/$(ADDON_NAME)/resources/skins: $(BUILDDIR)/$(ADDON_NAME)/resources/s
 
 $(BUILDDIR)/$(ADDON_NAME)/resources/skins/Default/media/default:
 	mkdir -p $(BUILDDIR)/$(ADDON_NAME)/resources/skins/Default/media/default
-	cp textures/CoreELEC/*.{png,jpg} $(BUILDDIR)/$(ADDON_NAME)/resources/skins/Default/media/default
+	cp textures/MagicELEC/*.{png,jpg} $(BUILDDIR)/$(ADDON_NAME)/resources/skins/Default/media/default
 
 $(BUILDDIR)/$(ADDON_NAME)/resources/skins/Default/media/icons:
 	mkdir -p $(BUILDDIR)/$(ADDON_NAME)/resources/skins/Default/media/icons
